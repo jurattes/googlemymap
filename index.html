@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "styles.css" rel = "stylesheet">
+</head>
+<body>
+
+    <script>
+        function openDescription(evt, Area) {
+             var i, tabcontent;
+             tabcontent = document.getElementsByClassName("tabcontent");
+           for(i=0;i<tabcontent.length;i++){
+             tabcontent[i].style.display = "none";
+           }
+           document.getElementById(Area).style.display = "block";
+           evt.currentTarget.className += "active";
+         }
+     </script>
+
+    <div class = "header">
+        <div class = "nav">
+            <a href = "#"> La Voie </a>
+            <a href = "#"> Saint Mary </a>
+            <a href = "#"> Queen Mary </a>
+            <a href = "#"> Snowdon </a>
+            <a href = "#"> Orange Julep </a>
+            <a href = "#"> Saint-Pascal Baylon</a>
+        </div>
+    </div>
+
+    <div class = "flex-container">
+        <div class = "content">
+            <div class = "tabcontent" id = "Area1">
+                <h3> École Secondaire La Voie </h3>
+                <p> This is a high school I attended. </p>
+            </div>
+            <div class = "tabcontent" id = "Area2">
+                <h3> Hôpital Saint Mary </h3>
+                <p> This is where I was born. </p>
+            </div>
+            <div class = "tabcontent" id = "Area3">
+                <h3> Metro Queen Mary </h3>
+                <p> This is my work. </p>
+            </div>
+            <div class = "tabcontent" id = "Area4">
+                <h3> Metro Snowdon </h3>
+                <p> This is the metro I take to go to school. </p>
+            </div>
+            <div class = "tabcontent" id = "Area5">
+                <h3> Gibeau Orange Julep </h3>
+                <p> This is a pbulic attraction here in Montreal. </p>
+            </div>
+            <div class = "tabcontent" id = "Area6">
+                <h3> École Saint-Pascal Baylon </h3>
+                <p> This is a a grade school I attended. </p>
+            </div>
+        </div>
+
+        <div class = "map">
+            <img src = "images/map.png" alt = "map" usemap = "#mappoint">
+            <map name = "mappoint">
+                <area alt="Ecole Secondaire La Voie" title="Ecole Secondaire La Voie" href="lavoie.html" coords="544,245,19" shape="circle" onmouseover = "openDescription(event, 'Area1')">
+                <area alt="Hôpital Saint Mary" title="Hôpital Saint Mary" href="saintmary.html" coords="733,305,759,335" shape="rect" onmouseover = "openDescription(event, 'Area2')">
+                <area alt="Metro Queen Mary" title="Metro Queen Mary" href="metroqueenmary.html" coords="689,490,10" shape="circle" onmouseover = "openDescription(event, 'Area3')">
+                <area alt="Metro Snowdon" title="Metro Snowdon" href="metrosnowdon.html" coords="703,473,13" shape="circle" onmouseover = "openDescription(event, 'Area4')">
+                <area alt="Gibeau Orange Julep" title="Gibeau Orange Julep" href="orangejulep.html" coords="349,287,379,319" shape="rect" onmouseover = "openDescription(event, 'Area5')">
+                <area alt="École Saint-Pascal Baylon" title="École Saint-Pascal Baylon" href="spb.html" coords="606,192,633,224" shape="rect" onmouseover = "openDescription(event, 'Area6')">
+            </map>
+        </div>
+    </div>
+
+    <div class = "footer">
+        <h3> Website made by Justin Pescador </h3>
+    </div>
+
+</body>
+</html>
